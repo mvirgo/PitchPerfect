@@ -29,6 +29,8 @@ class PlaySoundsViewController: UIViewController {
         case slow = 0, fast, chipmunk, vader, echo, reverb
     }
     
+    // MARK: Play and Stop button functions
+    
     @IBAction func playSoundForButton(_ sender: UIButton) {
         switch(ButtonType(rawValue: sender.tag)!) {
         case .slow:
@@ -51,6 +53,8 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func stopButtonPressed(_ sender: AnyObject) {
         stopAudio()
     }
+    
+    // MARK: View functions
 
     override func viewDidLoad() {
         super.viewDidLoad()

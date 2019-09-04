@@ -17,6 +17,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopRecordingButton: UIButton!
     
+    // MARK: View functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         stopRecordingButton.isEnabled = false
@@ -24,8 +26,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear called.")
     }
+    
+    // MARK: Recording audio functions
 
     @IBAction func recordAudio(_ sender: Any) {
         recordingLabel.text = "Recording in Progress"
